@@ -9,11 +9,6 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration
 @Configuration
 
-// @SpringBootApplication
-// @EnableTransactionManagement
-// @EnableCaching
-// @EnableScheduling
-// @EnableAsync
 public class Application {
     static void main(String[] args) {
         SpringApplication.run(Application.class, args);
