@@ -1,0 +1,73 @@
+buildscript {
+    println "Running in BUILDSCRIPT and its DEPENDENCIES"
+  
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE")
+  } 
+}
+
+plugins {
+   id "com.github.samueltbrown.cucumber" version "0.9"
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+ext {
+    junitVersion = '4.11'
+    cucumberJVMVersion = '1.2.4'
+    guavaVersion = '19.0'
+    jadiraVersion = '4.0.0.GA'
+    swaggerVersion = '2.3.0'
+    jacocoVersion = '0.75.201505241946'
+}
+
+repositories {
+    println "Running in REPOSITORIES where MavenCentral is defined"
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+      compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+      compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+      compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+      compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+      compile group: 'org.springframework', name: 'spring-context-support'
+      compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-joda'
+      compile group: 'com.google.guava', name: 'guava', version: guavaVersion
+      compile group: 'org.jadira.usertype', name: 'usertype.extended', version: jadiraVersion
+      compile group: 'io.springfox', name: 'springfox-swagger2', version: swaggerVersion
+      compile group: 'io.springfox', name: 'springfox-swagger-ui', version: swaggerVersion
+      
+      compile 'javax.servlet:jstl:1.2'
+      
+      testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+      
+      println "Running in DEPENDENCIES outside "
+      // http://mvnrepository.com/artifact/info.cukes/cucumber-core
+      //compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.4'
+      
+      testCompile 'info.cukes:cucumber-java:'+cucumberJVMVersion
+      testCompile 'info.cukes:cucumber-junit:'+cucumberJVMVersion
+      testCompile group: 'junit', name: 'junit-dep', version: junitVersion
+    
+      runtime group: 'org.hsqldb', name: 'hsqldb'
+      runtime group: 'mysql', name: 'mysql-connector-java'
+}
+
+cucumber {
+    println "Adding CUCUMNER properties"
+    formats = ['pretty','junit:build/cucumber.xml']
+}
+
+allprojects {
+    println "in ALLPROJECTS task"
+    afterEvaluate {
+        eclipse.project {
+            natures 'org.springsource.ide.eclipse.gradle.core.nature'
+        }
+    }
+}

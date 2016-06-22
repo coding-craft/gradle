@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: Student registration" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-06-19T17:31:58" hostname="Raj-HP" time="0.001">
+  <properties/>
+  <testcase name="Given I am on the Students registration page" classname="Scenario: Student registration" time="0.0"/>
+  <testcase name="When Click on Register button" classname="Scenario: Student registration" time="0.0"/>
+  <testcase name="Then I should be able to register a new student" classname="Scenario: Student registration" time="0.0"/>
+  <testcase name="classMethod" classname="Scenario: Student registration" time="0.187"/>
+  <system-out><![CDATA[i_am_on_the_Students_registration_page
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

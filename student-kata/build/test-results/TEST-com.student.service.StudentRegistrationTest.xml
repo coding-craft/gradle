@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.student.service.StudentRegistrationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-06-19T17:32:12" hostname="Raj-HP" time="0.04">
+  <properties/>
+  <testcase name="createStudentUsingStudentBuilder" classname="com.student.service.StudentRegistrationTest" time="0.001"/>
+  <testcase name="updateStudentAddress" classname="com.student.service.StudentRegistrationTest" time="0.0"/>
+  <testcase name="canRegisterAStudentWithDetails" classname="com.student.service.StudentRegistrationTest" time="0.0"/>
+  <testcase name="registerCollectionOfStudents" classname="com.student.service.StudentRegistrationTest" time="0.038"/>
+  <system-out><![CDATA[2016-06-19 18:32:12.783  INFO 42648 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.student.AbstractStudentTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2016-06-19 18:32:12.785  INFO 42648 --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-06-19 18:32:12.786  INFO 42648 --- [    Test worker] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5e10b8b8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2cd20de2, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1bde8039, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5989bf28, org.springframework.test.context.transaction.TransactionalTestExecutionListener@28709d9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3e06a976]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
